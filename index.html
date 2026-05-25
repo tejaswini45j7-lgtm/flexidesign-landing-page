@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Modern Design</title>
+    <!-- This line links your HTML to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">FlexiDesign</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-btn" id="themeToggle">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN HERO CONTENT -->
+    <main>
+        <section class="hero">
+            <h1>We build clean templates for modern web projects.</h1>
+            <p>A simple, responsive landing page template using vanilla HTML and CSS variables. Perfect for your next side project or portfolio site.</p>
+            <a href="#features" class="cta-btn">Get Started</a>
+        </section>
+
+        <!-- FEATURES GRID -->
+        <section class="features-section" id="features">
+            <div class="features-container">
+                <h2 class="section-title">Why choose us?</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Pure CSS Variables</h3>
+                        <p>Easily swap out primary, secondary, and accent colors across the entire project in just seconds using CSS custom properties.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fully Responsive</h3>
+                        <p>Built with CSS Grid and Flexbox, ensuring this page automatically scales gracefully down to any mobile phone display.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Dark Mode Ready</h3>
+                        <p>Comes equipped with micro-interactions and an instant theme toggler utility that updates styles dynamically.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 FlexiDesign. Built beautifully with HTML & CSS.</p>
+    </footer>
+
+    <!-- INTERACTIVE THEME TOGGLE SCRIPT -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeToggle.textContent = 'Dark Mode';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = 'Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
